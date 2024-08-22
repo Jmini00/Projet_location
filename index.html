@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site de location de voiture pas cher en France" >
+    <title>Location de voitures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/mains.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="bt-mobile">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+            </ul>
+        </nav>
+        <div id="home-slider">
+            <!-- pour integration : img créé ensuite en JS -->
+            <!-- <img src="images/slider/slider-01.jpg" alt="Agence de location de voitures"> -->
+            <h1>Bienvenu à bord</h1>
+            <h2>Location de voiture 24h/24 et 7 jours sur 7</h2>
+            <form action="#" method="post" id="search" class="flex-row">
+                <div class="flex-row">
+                    <select name="adress" id="adress" required>
+                        <option value="">Adresse de depart</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Marseille">Marseille</option>
+                        <option value="Rennes">Rennes</option>
+                    </select>
+                    <input type="date" name="date_begin" id="date_begin" required>
+                    <input type="date" name="date_end" id="date_end" required>
+                </div>
+                <input type="submit" value="Valider ma recherche">
+            </form>
+        </div>
+    </header>
+    <main class="container-width">
+        <div class="flex-row">
+            <p id="nbre-results"></p>
+            <form action="order_results">
+                <select name="type_order" id="type-order">
+                    <option value="" selected>Trier par:</option>                    
+                    <option value="price">Prix croissant</option>
+                    <option value="model">Modèle</option>
+                </select>
+            </form>
+        </div>
+        <div id="container-results">
+            <!-- HTML recuperé réalisé au prealable et recuperé dans le JS loadDatas.js -->
+             <!--    
+            <article class="flex-row">
+                <figure>
+                    <img src="images/arrow-left.gif" alt="fleche gauche">                    
+                    <img src="images/vehicule1.png" alt="Peugeot 208 ">
+                    <img src="images/arrow-right.gif" alt="fleche droite">
+                </figure>
+                <div>
+                    <h3>Peugeot 208</h3>
+                    <p>Description SDSGGG dssd </p>
+                    <p>990€ - Agence de <span>Paris</span></p>
+                    <button>Reserver et payer</button>
+                </div>
+            </article>
+            <hr> -->
+        </div>
+       
+    </main>
+    <footer class="flex-row">
+        <img src="images/agence.jpg" alt="agence de location">
+        <p>
+            Agence de location <br>
+            150 rue Vaugirard 75015 Paris  <br>
+            ouvert 24h/24 et 7 jours sur 7 <br>
+            Tel. : 01 42 34 56 67       </p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+@use "_var" as v;
+
+@mixin gradient-bt {
+    background: linear-gradient(0deg, #{v.$secondary-color} 0%, #{v.$gradient-color} 100%); 
+    padding: 7px 15px; 
+    color: v.$primary-color; 
+    cursor: pointer; 
+}
+
+
+@mixin fadeIn {
+    @keyframes fade-in {
+        0% {opacity: 0;}
+        100% {opacity: 1;}        
+    }
+}
